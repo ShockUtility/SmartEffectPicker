@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartEffectPicker" customModule="SmartEffectPicker" customModuleProvider="target">
+            <connections>
+                <outlet property="slFilterValue" destination="bfp-O3-X08" id="ivO-fT-et0"/>
+                <outlet property="tabBar" destination="BFZ-Eu-6eV" id="2He-FP-BMJ"/>
+                <outlet property="tabBrightness" destination="9cz-Up-vLc" id="sH1-Tx-g83"/>
+                <outlet property="tabContrast" destination="haQ-3g-OFo" id="f7v-yN-mAb"/>
+                <outlet property="tabGamma" destination="9bR-h2-fZF" id="AFF-UZ-21Y"/>
+                <outlet property="tabSaturation" destination="3BJ-Zi-r2F" id="FTG-kN-VJZ"/>
+                <outlet property="tabSharpen" destination="pu7-o6-fRr" id="mWy-Tx-dk6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwRoot" destination="IWK-0T-iTf" id="Prp-dc-IjB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="RUu-TN-MKZ">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Vlg-I2-Fbd"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Effect" id="DBQ-ge-uXf">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H3f-XU-R64">
+                                <connections>
+                                    <action selector="onClickCancel:" destination="-1" id="8zl-Te-4c5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="done" id="Bql-Nj-kcr">
+                                <connections>
+                                    <action selector="onClickDone:" destination="-1" id="aDh-x6-EoN"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWK-0T-iTf">
+                    <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-UO-n6v">
+                    <rect key="frame" x="37.666666666666657" y="669" width="300" height="50"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-O3-X08">
+                            <rect key="frame" x="6" y="10" width="238" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="onChangeFilterValue:" destination="-1" eventType="valueChanged" id="10U-34-wib"/>
+                            </connections>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-e1-JCB">
+                            <rect key="frame" x="250" y="0.0" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="reset.png"/>
+                            <connections>
+                                <action selector="onClickReset:" destination="-1" eventType="touchUpInside" id="9p9-Tl-arb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3vf-Ty-eCU"/>
+                        <constraint firstAttribute="width" constant="300" id="rfq-0s-jxO"/>
+                    </constraints>
+                </view>
+                <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-Eu-6eV">
+                    <rect key="frame" x="0.0" y="729" width="375" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem title="Brightness" image="bright.png" id="9cz-Up-vLc"/>
+                        <tabBarItem title="Contrast" image="contrast.png" id="haQ-3g-OFo"/>
+                        <tabBarItem title="Saturation" image="saturation.png" id="3BJ-Zi-r2F"/>
+                        <tabBarItem title="Sharpen" image="sharpen.png" id="pu7-o6-fRr"/>
+                        <tabBarItem title="Gamma" image="gamma.png" id="9bR-h2-fZF"/>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="79v-zJ-WBj"/>
+                    </connections>
+                </tabBar>
+            </subviews>
+            <constraints>
+                <constraint firstItem="RUu-TN-MKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="BV6-mU-eBe"/>
+                <constraint firstAttribute="trailing" secondItem="RUu-TN-MKZ" secondAttribute="trailing" id="ODg-Fr-JUy"/>
+                <constraint firstItem="aZv-UO-n6v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vfj-QN-h9l"/>
+                <constraint firstItem="BFZ-Eu-6eV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vpx-wU-rGs"/>
+                <constraint firstAttribute="bottom" secondItem="BFZ-Eu-6eV" secondAttribute="bottom" id="dzf-uo-DgK"/>
+                <constraint firstAttribute="trailing" secondItem="BFZ-Eu-6eV" secondAttribute="trailing" id="qDO-aT-5Q4"/>
+                <constraint firstItem="BFZ-Eu-6eV" firstAttribute="top" secondItem="aZv-UO-n6v" secondAttribute="bottom" constant="10" id="uLN-HY-qDZ"/>
+                <constraint firstItem="RUu-TN-MKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ubv-eL-TFt"/>
+                <constraint firstItem="IWK-0T-iTf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w0A-sP-AcA"/>
+                <constraint firstItem="BFZ-Eu-6eV" firstAttribute="top" secondItem="IWK-0T-iTf" secondAttribute="bottom" id="xcC-jk-D2a"/>
+                <constraint firstItem="IWK-0T-iTf" firstAttribute="top" secondItem="RUu-TN-MKZ" secondAttribute="bottom" id="xjx-IV-Qdv"/>
+                <constraint firstAttribute="trailing" secondItem="IWK-0T-iTf" secondAttribute="trailing" id="yeo-pk-17S"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bright.png" width="32" height="32"/>
+        <image name="contrast.png" width="32" height="32"/>
+        <image name="gamma.png" width="32" height="32"/>
+        <image name="reset.png" width="50" height="50"/>
+        <image name="saturation.png" width="32" height="32"/>
+        <image name="sharpen.png" width="32" height="32"/>
+    </resources>
+</document>

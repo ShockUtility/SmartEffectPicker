@@ -1,11 +1,7 @@
+platform :ios, '8.0'
 use_frameworks!
 
 target 'SmartEffectPicker_Example' do
   pod 'SmartEffectPicker', :path => '../'
-
-  target 'SmartEffectPicker_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'GPUImage'
 end
