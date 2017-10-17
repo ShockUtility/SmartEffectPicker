@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SmartEffectPicker_Example' do
+  pod 'SmartEffectPicker', :path => '../'
+
+  target 'SmartEffectPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
