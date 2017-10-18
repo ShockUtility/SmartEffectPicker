@@ -95,8 +95,8 @@ open class SmartEffectPicker: UIViewController {
         sourcePicture?.processImage()
     }
     
-    override open var prefersStatusBarHidden : Bool {
-        return true
+    override open var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     func AspectFitRectInRect(_ rfit: CGRect, _ rtarget: CGRect) -> CGRect {

@@ -94,6 +94,7 @@
                     </connections>
                 </tabBar>
             </subviews>
+            <color key="backgroundColor" red="0.086436896629188589" green="0.086019327080255323" blue="0.08685446617812187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="RUu-TN-MKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="BV6-mU-eBe"/>
                 <constraint firstAttribute="trailing" secondItem="RUu-TN-MKZ" secondAttribute="trailing" id="ODg-Fr-JUy"/>
