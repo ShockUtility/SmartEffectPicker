@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartEffectPicker'
-  s.version          = '0.1.2'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of SmartEffectPicker.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.

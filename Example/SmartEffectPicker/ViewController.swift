@@ -17,10 +17,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let image = UIImage.init(named: "tile") {
-            self.view.backgroundColor = UIColor(patternImage: image)
-        }
     }
 
     @IBAction func onClickPhoto(_ sender: Any) {

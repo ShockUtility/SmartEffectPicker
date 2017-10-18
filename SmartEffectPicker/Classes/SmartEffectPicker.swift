@@ -231,6 +231,7 @@ extension SmartEffectPicker {
 // Global
 
 extension SmartEffectPicker {
+    @objc
     open class func startEffect(_ controller: UIViewController,
                                 title: String,
                                 sourceImage: UIImage,
