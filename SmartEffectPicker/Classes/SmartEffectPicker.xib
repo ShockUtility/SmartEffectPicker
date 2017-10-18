@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartEffectPicker" customModule="SmartEffectPicker" customModuleProvider="target">
             <connections>
+                <outlet property="navTitle" destination="DBQ-ge-uXf" id="Uam-SZ-Dgp"/>
                 <outlet property="slFilterValue" destination="bfp-O3-X08" id="ivO-fT-et0"/>
                 <outlet property="tabBar" destination="BFZ-Eu-6eV" id="2He-FP-BMJ"/>
                 <outlet property="tabBrightness" destination="9cz-Up-vLc" id="sH1-Tx-g83"/>
@@ -20,6 +21,7 @@
                 <outlet property="tabSaturation" destination="3BJ-Zi-r2F" id="FTG-kN-VJZ"/>
                 <outlet property="tabSharpen" destination="pu7-o6-fRr" id="mWy-Tx-dk6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwEffect" destination="aZv-UO-n6v" id="6Bc-tR-Ozz"/>
                 <outlet property="vwRoot" destination="IWK-0T-iTf" id="Prp-dc-IjB"/>
             </connections>
         </placeholder>
@@ -50,7 +52,7 @@
                 </navigationBar>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWK-0T-iTf">
                     <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-UO-n6v">
                     <rect key="frame" x="37.666666666666657" y="669" width="300" height="50"/>
@@ -65,13 +67,13 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-e1-JCB">
                             <rect key="frame" x="250" y="0.0" width="50" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <state key="normal" backgroundImage="reset.png"/>
+                            <state key="normal" backgroundImage="reset"/>
                             <connections>
                                 <action selector="onClickReset:" destination="-1" eventType="touchUpInside" id="9p9-Tl-arb"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3vf-Ty-eCU"/>
                         <constraint firstAttribute="width" constant="300" id="rfq-0s-jxO"/>
@@ -81,11 +83,11 @@
                     <rect key="frame" x="0.0" y="729" width="375" height="83"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <items>
-                        <tabBarItem title="Brightness" image="bright.png" id="9cz-Up-vLc"/>
-                        <tabBarItem title="Contrast" image="contrast.png" id="haQ-3g-OFo"/>
-                        <tabBarItem title="Saturation" image="saturation.png" id="3BJ-Zi-r2F"/>
-                        <tabBarItem title="Sharpen" image="sharpen.png" id="pu7-o6-fRr"/>
-                        <tabBarItem title="Gamma" image="gamma.png" id="9bR-h2-fZF"/>
+                        <tabBarItem title="Brightness" image="bright" id="9cz-Up-vLc"/>
+                        <tabBarItem title="Contrast" image="contrast" id="haQ-3g-OFo"/>
+                        <tabBarItem title="Saturation" image="saturation" id="3BJ-Zi-r2F"/>
+                        <tabBarItem title="Sharpen" image="sharpen" id="pu7-o6-fRr"/>
+                        <tabBarItem title="Gamma" image="gamma" id="9bR-h2-fZF"/>
                     </items>
                     <connections>
                         <outlet property="delegate" destination="-1" id="79v-zJ-WBj"/>
@@ -110,11 +112,11 @@
         </view>
     </objects>
     <resources>
-        <image name="bright.png" width="32" height="32"/>
-        <image name="contrast.png" width="32" height="32"/>
-        <image name="gamma.png" width="32" height="32"/>
-        <image name="reset.png" width="50" height="50"/>
-        <image name="saturation.png" width="32" height="32"/>
-        <image name="sharpen.png" width="32" height="32"/>
+        <image name="bright" width="32" height="32"/>
+        <image name="contrast" width="32" height="32"/>
+        <image name="gamma" width="32" height="32"/>
+        <image name="reset" width="50" height="50"/>
+        <image name="saturation" width="32" height="32"/>
+        <image name="sharpen" width="32" height="32"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@ import GPUImage
 
 open class SmartEffectPicker: UIViewController {
 
+    @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var vwRoot: UIView!
     @IBOutlet weak var slFilterValue: UISlider!
     
@@ -19,7 +20,8 @@ open class SmartEffectPicker: UIViewController {
     @IBOutlet weak var tabSaturation: UITabBarItem!
     @IBOutlet weak var tabSharpen: UITabBarItem!
     @IBOutlet weak var tabGamma: UITabBarItem!
-        
+    @IBOutlet weak var vwEffect: UIView!
+    
     var sourceImage: UIImage!
     var completedCallback: ((_ effectedImage: UIImage?) -> Void)!
 
@@ -45,6 +47,20 @@ open class SmartEffectPicker: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navTitle.title = self.title
+        tabBrightness.title = NSLocalizedString("Brightness", comment: "Brightness")
+        tabContrast.title = NSLocalizedString("Contrast", comment: "Contrast")
+        tabSaturation.title = NSLocalizedString("Saturation", comment: "Saturation")
+        tabSharpen.title = NSLocalizedString("Sharpen", comment: "Sharpen")
+        tabGamma.title = NSLocalizedString("Gamma", comment: "Gamma")
+        
+        vwEffect.layer.cornerRadius = 5.0
+        vwEffect.layer.masksToBounds = true
+        
+        if let image = UIImage(named: "tile", in: Bundle(for: SmartEffectPicker.self), compatibleWith: nil) {
+            vwRoot.backgroundColor = UIColor(patternImage: image)
+        }
         tabBar.selectedItem = tabBrightness
     }
     
@@ -57,7 +73,6 @@ open class SmartEffectPicker: UIViewController {
         imageView = GPUImageView(frame: rect)
         imageView?.fillMode = kGPUImageFillModePreserveAspectRatio
         vwRoot.addSubview(imageView!)
-        print(rect, self.view.frame)
         
         filterBrightness.addTarget(filterContrast)
         filterContrast.addTarget(filterSaturation)
@@ -159,22 +174,26 @@ extension SmartEffectPicker {
     }
     
     @IBAction func onClickReset(_ sender: Any) {
-        slFilterValue.value = 0.0
         if let item = tabBar.selectedItem {
             switch item {
             case tabBrightness :
+                slFilterValue.value = 0.0
                 filterBrightness.brightness = 0.0
                 break
             case tabContrast :
+                slFilterValue.value = 1.0
                 filterContrast.contrast = 1.0
                 break
             case tabSaturation :
+                slFilterValue.value = 1.0
                 filterSaturation.saturation = 1.0
                 break
             case tabSharpen :
+                slFilterValue.value = 0.4
                 filterSharpen.sharpness = 0.4
                 break
             case tabGamma :
+                slFilterValue.value = 1.0
                 filterGamma.gamma = 1.0
                 break
             default: break
@@ -218,8 +237,8 @@ extension SmartEffectPicker {
                                 completed: @escaping (_ effectedImage: UIImage?) -> Void)
     {
         let picker = SmartEffectPicker(title: title)
-        picker.modalPresentationStyle = .overCurrentContext
-        picker.modalTransitionStyle = .crossDissolve
+//        picker.modalPresentationStyle = .overCurrentContext
+//        picker.modalTransitionStyle = .crossDissolve
         picker.sourceImage = sourceImage
         picker.completedCallback = completed
         

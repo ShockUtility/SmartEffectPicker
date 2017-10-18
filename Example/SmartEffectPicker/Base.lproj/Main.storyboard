@@ -21,13 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9zV-Sc-5mN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Riv-rj-SMI">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <rect key="frame" x="137" y="617" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="TpH-Oh-uAU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="TpH-Oh-uAU"/>
                                     <constraint firstAttribute="height" constant="30" id="WMZ-RB-Okq"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Start Effect"/>
                                 <connections>
                                     <action selector="onClickPhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S1T-l1-0Zs"/>
                                 </connections>
@@ -35,13 +39,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Riv-rj-SMI" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RUb-DZ-8og"/>
+                            <constraint firstItem="9zV-Sc-5mN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Kfn-Gm-cNJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9zV-Sc-5mN" secondAttribute="bottom" id="XZa-8u-tSe"/>
+                            <constraint firstItem="9zV-Sc-5mN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="edF-QJ-m9C"/>
                             <constraint firstItem="Riv-rj-SMI" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hBX-Ek-HLz"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Riv-rj-SMI" secondAttribute="bottom" constant="20" id="rkk-sc-0xT"/>
+                            <constraint firstAttribute="trailing" secondItem="9zV-Sc-5mN" secondAttribute="trailing" id="yV8-ul-ye8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="9zV-Sc-5mN" id="afZ-hj-EeY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

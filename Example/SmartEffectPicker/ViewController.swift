@@ -11,11 +11,16 @@ import SmartEffectPicker
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let image = UIImage.init(named: "tile") {
+            self.view.backgroundColor = UIColor(patternImage: image)
+        }
     }
 
     @IBAction func onClickPhoto(_ sender: Any) {
@@ -29,7 +34,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             dismiss(animated: true, completion: {
-                SmartEffectPicker.startEffect(self, title: "Effect", sourceImage: pickedImage) { (effectedImage) in
+                SmartEffectPicker.startEffect(self, title: NSLocalizedString("Effect", comment: "Effect"), sourceImage: pickedImage) { (effectedImage) in
+                    self.imageView.image = effectedImage
                 }
             })
         } else {
