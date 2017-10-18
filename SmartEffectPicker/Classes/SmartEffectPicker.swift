@@ -38,8 +38,7 @@ open class SmartEffectPicker: UIViewController {
     }
     
     init(title: String) {
-        let bundle = Bundle(for: SmartEffectPicker.self)
-        super.init(nibName: "SmartEffectPicker", bundle: bundle)
+        super.init(nibName: "SmartEffectPicker", bundle: Bundle(for: SmartEffectPicker.self))
         
         self.title = title
     }

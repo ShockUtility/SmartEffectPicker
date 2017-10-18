@@ -21,13 +21,11 @@ DESC
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SmartEffectPicker/Classes/**/*.{swift}'
-  s.resource_bundles = {
-    'SmartEffectPicker' => [
-      'SmartEffectPicker/Classes/**/*.xib',
-      'SmartEffectPicker/Assets/**/*.png'
-    ]
-  }
+  s.source_files = 'SmartEffectPicker/Classes/**/*'
+  s.resource_bundles = { 'SmartEffectPicker' => ['SmartEffectPicker/Classes/*.xib'] }
+  s.resources = "SmartEffectPicker/Assets/*.xcassets"
 
   s.dependency 'GPUImage'
 end
+
+# > pod trunk push SmartEffectPicker.podspec --verbose --allow-warnings
