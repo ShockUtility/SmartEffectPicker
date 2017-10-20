@@ -45,7 +45,9 @@
                                      title:NSLocalizedString(@"Effect", comment: @"Effect")
                                sourceImage:pickedImage
                                  completed:^(UIImage *effectedImage) {
-                                     self.imageView.image = effectedImage;
+                                     if (effectedImage != nil) {
+                                         self.imageView.image = effectedImage;
+                                     }
                                  }];
         }];
     } else {

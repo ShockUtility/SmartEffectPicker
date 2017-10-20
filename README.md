@@ -9,6 +9,17 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```objc
+    [SmartEffectPicker startEffect:self
+                             title:@"Effect"
+                        ourceImage:pickedImage
+                         completed:^(UIImage *effectedImage) {
+                             if (effectedImage != nil) {
+                                 self.imageView.image = effectedImage;
+                             }
+                         }];
+```
+
 ## Requirements
 
 [GPUImage](https://github.com/BradLarson/GPUImage)
