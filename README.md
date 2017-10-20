@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/SmartEffectPicker.svg?style=flat)](http://cocoapods.org/pods/SmartEffectPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SmartEffectPicker.svg?style=flat)](http://cocoapods.org/pods/SmartEffectPicker)
 
-![Screenshot](https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true){:height="50%" width="50%"}
-
-<img src="https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true" width="50%" height="50%">
+<center>
+    <img src="https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true" width="50%" height="50%">
+</center>
 
 ## Example
 
