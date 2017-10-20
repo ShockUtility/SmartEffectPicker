@@ -21,7 +21,7 @@ Objective-C
 Swift
 ```swift
     SmartEffectPicker.startEffect(self,
-                                  title: NSLocalizedString("Effect", comment: "Effect"),
+                                  title: "Effect",
                                   sourceImage: pickedImage) { (effectedImage) in
                                       if let image = effectedImage {
                                           self.imageView.image = image
