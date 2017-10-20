@@ -26,3 +26,5 @@ DESC
 
   s.dependency 'GPUImage'
 end
+
+# > pod trunk push SmartEffectPicker.podspec --verbose --allow-warnings
