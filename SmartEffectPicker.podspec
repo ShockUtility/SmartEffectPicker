@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartEffectPicker'
-  s.version          = '0.1.7'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of SmartEffectPicker.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -22,7 +22,6 @@ DESC
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SmartEffectPicker/Classes/**/*'
-#  s.resource_bundles = {'SmartEffectPicker' => ['SmartEffectPicker/Classes/*.xib']}
   s.resources = "SmartEffectPicker/Assets/*.{xcassets}"
 
   s.dependency 'GPUImage'
