@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/SmartEffectPicker.svg?style=flat)](http://cocoapods.org/pods/SmartEffectPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SmartEffectPicker.svg?style=flat)](http://cocoapods.org/pods/SmartEffectPicker)
 
+![Screenshot](https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true)<br>
+
 ## Example
 
 Objective-C
