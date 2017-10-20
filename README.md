@@ -11,9 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-```code
 [GPUImage](https://github.com/BradLarson/GPUImage)
-```
+
 ## Installation
 
 SmartEffectPicker is available through [CocoaPods](http://cocoapods.org). To install
