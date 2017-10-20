@@ -7,6 +7,8 @@
 
 ![Screenshot](https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true){:height="50%" width="50%"}
 
+<img src="https://github.com/ShockUtility/SmartEffectPicker/blob/master/preview.png?raw=true" width="50%" height="50%">
+
 ## Example
 
 Objective-C
