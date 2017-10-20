@@ -7,14 +7,12 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 Objective-C
 ```objc
-    [SmartEffectPicker startEffect:self
-                             title:@"Effect"
-                        ourceImage:pickedImage
-                         completed:^(UIImage *effectedImage) {
+    [SmartEffectPicker startEffect: self
+                             title: @"Effect"
+                       sourceImage: pickedImage
+                         completed: ^(UIImage *effectedImage) {
                              if (effectedImage != nil) {
                                  self.imageView.image = effectedImage;
                              }
@@ -25,7 +23,9 @@ Swift
     SmartEffectPicker.startEffect(self,
                                   title: NSLocalizedString("Effect", comment: "Effect"),
                                   sourceImage: pickedImage) { (effectedImage) in
-                                      self.imageView.image = effectedImage
+                                      if let image = effectedImage {
+                                          self.imageView.image = image
+                                      }
                                   }
 ```
 
