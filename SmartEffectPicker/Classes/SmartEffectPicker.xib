@@ -21,6 +21,7 @@
                 <outlet property="tabSaturation" destination="3BJ-Zi-r2F" id="FTG-kN-VJZ"/>
                 <outlet property="tabSharpen" destination="pu7-o6-fRr" id="mWy-Tx-dk6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwBanner" destination="bwH-yz-pcj" id="PSW-uA-oJB"/>
                 <outlet property="vwEffect" destination="aZv-UO-n6v" id="hNO-fW-Xf6"/>
                 <outlet property="vwRoot" destination="IWK-0T-iTf" id="gLI-UH-yt0"/>
             </connections>
@@ -51,11 +52,11 @@
                     </items>
                 </navigationBar>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWK-0T-iTf">
-                    <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                    <rect key="frame" x="0.0" y="88" width="375" height="640"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-UO-n6v">
-                    <rect key="frame" x="37.666666666666657" y="669" width="300" height="50"/>
+                    <rect key="frame" x="37.666666666666657" y="668" width="300" height="50"/>
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-O3-X08">
                             <rect key="frame" x="6" y="10" width="238" height="30"/>
@@ -80,8 +81,11 @@
                     </constraints>
                 </view>
                 <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-Eu-6eV">
-                    <rect key="frame" x="0.0" y="729" width="375" height="83"/>
+                    <rect key="frame" x="0.0" y="728" width="375" height="49"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="RMi-Sa-4OI"/>
+                    </constraints>
                     <items>
                         <tabBarItem title="Brightness" image="bright" id="9cz-Up-vLc"/>
                         <tabBarItem title="Contrast" image="contrast" id="haQ-3g-OFo"/>
@@ -93,20 +97,30 @@
                         <outlet property="delegate" destination="-1" id="cI7-NN-pCa"/>
                     </connections>
                 </tabBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwH-yz-pcj">
+                    <rect key="frame" x="0.0" y="777" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.086436896629999996" green="0.086019327079999999" blue="0.086854466180000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5JP-Ji-hoE"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.086436896629188589" green="0.086019327080255323" blue="0.08685446617812187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="RUu-TN-MKZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="BV6-mU-eBe"/>
+                <constraint firstAttribute="trailing" secondItem="bwH-yz-pcj" secondAttribute="trailing" id="Lvb-AC-VnW"/>
+                <constraint firstItem="bwH-yz-pcj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Naq-mc-jP0"/>
                 <constraint firstAttribute="trailing" secondItem="RUu-TN-MKZ" secondAttribute="trailing" id="ODg-Fr-JUy"/>
                 <constraint firstItem="aZv-UO-n6v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vfj-QN-h9l"/>
                 <constraint firstItem="BFZ-Eu-6eV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vpx-wU-rGs"/>
-                <constraint firstAttribute="bottom" secondItem="BFZ-Eu-6eV" secondAttribute="bottom" id="dzf-uo-DgK"/>
+                <constraint firstItem="bwH-yz-pcj" firstAttribute="top" secondItem="BFZ-Eu-6eV" secondAttribute="bottom" id="hwA-pF-wUT"/>
                 <constraint firstAttribute="trailing" secondItem="BFZ-Eu-6eV" secondAttribute="trailing" id="qDO-aT-5Q4"/>
                 <constraint firstItem="BFZ-Eu-6eV" firstAttribute="top" secondItem="aZv-UO-n6v" secondAttribute="bottom" constant="10" id="uLN-HY-qDZ"/>
                 <constraint firstItem="RUu-TN-MKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ubv-eL-TFt"/>
                 <constraint firstItem="IWK-0T-iTf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w0A-sP-AcA"/>
                 <constraint firstItem="BFZ-Eu-6eV" firstAttribute="top" secondItem="IWK-0T-iTf" secondAttribute="bottom" id="xcC-jk-D2a"/>
                 <constraint firstItem="IWK-0T-iTf" firstAttribute="top" secondItem="RUu-TN-MKZ" secondAttribute="bottom" id="xjx-IV-Qdv"/>
+                <constraint firstItem="bwH-yz-pcj" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="yDC-D6-euI"/>
                 <constraint firstAttribute="trailing" secondItem="IWK-0T-iTf" secondAttribute="trailing" id="yeo-pk-17S"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

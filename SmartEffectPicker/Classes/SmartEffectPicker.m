@@ -203,15 +203,17 @@
     }];
 }
 
-+ (void)startEffect:(UIViewController *)controller
-              title:(NSString *)title
-        sourceImage:(UIImage *)sourceImage
-          completed:(void (^)(UIImage *effectedImage))completed
++ (SmartEffectPicker *)startEffect:(UIViewController *)controller
+                             title:(NSString *)title
+                       sourceImage:(UIImage *)sourceImage
+                         completed:(void (^)(UIImage *effectedImage))completed
 {
     SmartEffectPicker *picker = [[SmartEffectPicker alloc] initWithTitle:title];
     picker.sourceImage = sourceImage;
     picker.completedCallback = completed;
     [controller presentViewController:picker animated:YES completion:nil];
+    
+    return picker;
 }
 
 CGFloat ScaleToAspectFitRectInRect(CGRect rfit, CGRect rtarget) {

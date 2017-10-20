@@ -9,9 +9,11 @@
 
 @interface SmartEffectPicker : UIViewController <UITabBarDelegate>
 
-+ (void)startEffect:(UIViewController *)controller
-              title:(NSString *)title
-        sourceImage:(UIImage *)sourceImage
-          completed:(void (^)(UIImage *effectedImage))completed;
+@property (weak, nonatomic) IBOutlet UIView *vwBanner;
+
++ (SmartEffectPicker *)startEffect:(UIViewController *)controller
+                             title:(NSString *)title
+                       sourceImage:(UIImage *)sourceImage
+                         completed:(void (^)(UIImage *effectedImage))completed;
 
 @end
