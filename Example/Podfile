@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'SmartEffectPicker_Example' do
+  pod 'SmartEffectPicker', :path => '../'
+end
