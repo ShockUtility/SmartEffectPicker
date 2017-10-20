@@ -9,6 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Objective-C
 ```objc
     [SmartEffectPicker startEffect:self
                              title:@"Effect"
@@ -18,6 +19,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
                                  self.imageView.image = effectedImage;
                              }
                          }];
+```
+Swift
+```swift
+    SmartEffectPicker.startEffect(self,
+                                  title: NSLocalizedString("Effect", comment: "Effect"),
+                                  sourceImage: pickedImage) { (effectedImage) in
+                                      self.imageView.image = effectedImage
+                                  }
 ```
 
 ## Requirements
