@@ -115,6 +115,13 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    CGRect rect =  AspectFitRectInRect(CGRectMake(0, 0, _sourceImage.size.width, _sourceImage.size.height),
+                                       CGRectMake(0, 0, _vwRoot.frame.size.width, _vwRoot.frame.size.height));
+    imageView.frame = rect;
+    [sourcePicture processImage];
+}
+
 - (BOOL)prefersStatusBarHidden {
     if (@available(iOS 11.0, *)) {
         if (UIApplication.sharedApplication.keyWindow.safeAreaInsets.top > 0.0) // iPhoneX 와 같이 상태바 영역이 따로 존재하는 경우 상태바 표시
